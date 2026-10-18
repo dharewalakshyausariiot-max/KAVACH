@@ -43,8 +43,6 @@ powershell -File scripts/start-backend.ps1
 npm run dev
 ```
 
-Open http://localhost:3000 and inspect Settings/health. Python binds 127.0.0.1:8000. Missing tools must appear unavailable or degraded. Optional model setup is described in [forensics/README.md](forensics/README.md); review [licences](docs/LICENSES.md) first.
-
 ## Feature status
 
 Working means implemented with automated coverage in the current release checks, not live provider certification. See the exact latest results in [SCORECARD](docs/SCORECARD.md) and `docs/evidence/release.json`.
