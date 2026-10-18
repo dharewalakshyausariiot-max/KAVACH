@@ -1,0 +1,53 @@
+{
+  "name": "cyber-bodyguard",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "tsx scripts/start-next.ts dev",
+    "build": "next build",
+    "start": "tsx scripts/start-next.ts start",
+    "lint": "next lint",
+    "test": "vitest run",
+    "test:agent": "vitest run src/agent/__tests__ src/app/api/investigate/route.test.ts src/tools/domainOsint.test.ts",
+    "smoke:model": "tsx scripts/smoke-model.ts",
+    "health": "tsx scripts/health.ts",
+    "bench:baseline": "tsx scripts/bench.ts baseline",
+    "make:benchmark": "tsx scripts/make-benchmark.ts",
+    "bench:verdicts": "tsx scripts/bench-verdicts.ts",
+    "bench:v2": "tsx scripts/bench.ts v2",
+    "bench:fail": "tsx scripts/bench.ts fail",
+    "scorecard": "tsx scripts/scorecard.ts",
+    "release-check": "tsx scripts/release-check.ts"
+  },
+  "dependencies": {
+    "@ai-sdk/anthropic": "3.0.129",
+    "@ai-sdk/openai": "3.0.125",
+    "@ai-sdk/openai-compatible": "2.0.81",
+    "@tiny-fish/sdk": "^0.8.0",
+    "ai": "6.0.303",
+    "neatlogs": "^1.1.28",
+    "next": "^14.2.35",
+    "pixelmatch": "5.3.0",
+    "pngjs": "6.0.0",
+    "react": "18.3.0",
+    "react-dom": "18.3.0",
+    "recharts": "^3.10.1",
+    "sharp": "0.33.5",
+    "zod": "3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "20.14.2",
+    "@types/pixelmatch": "5.2.6",
+    "@types/pngjs": "6.0.5",
+    "@types/react": "18.3.3",
+    "autoprefixer": "10.4.19",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^14.2.35",
+    "postcss": "8.4.41",
+    "tailwindcss": "3.4.3",
+    "tsx": "^4.23.15",
+    "typescript": "5.5.2",
+    "vite": "^7.3.7",
+    "vitest": "3.2.7"
+  }
+}

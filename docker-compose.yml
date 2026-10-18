@@ -1,0 +1,21 @@
+services:
+  forensics:
+    build: ./forensics
+    env_file: ./forensics/.env
+    ports:
+      - "127.0.0.1:8000:8000"
+    restart: unless-stopped
+    init: true
+    read_only: true
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    tmpfs:
+      - /tmp:size=256m,mode=1777
+    volumes:
+      - model-cache:/service/.cache
+    mem_limit: 16g
+    pids_limit: 128
+volumes:
+  model-cache:
